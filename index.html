@@ -375,30 +375,7 @@
             }
         });
 
-        const reviewContainer = document.querySelector('.review');
-        const reviewLine1 = document.querySelector('.review-line-1');
-        const reviewLine2 = document.querySelector('.review-line-2');
-
-        // 두 번째 라인을 첫 번째 라인 뒤에 복제
-        const clonedLine1 = reviewLine1.cloneNode(true);
-        const clonedLine2 = reviewLine2.cloneNode(true);
-        reviewContainer.appendChild(clonedLine1);
-        reviewContainer.appendChild(clonedLine2);
-
-        let scrollAmount = 0;
-
-        function loopReviews() {
-            scrollAmount += 1; // 스크롤 속도 조절
-            reviewContainer.scrollTop = scrollAmount;
-
-            // 스크롤이 끝까지 갔을 때 초기화
-            if (scrollAmount >= reviewContainer.scrollHeight / 2) {
-                scrollAmount = 0;
-            }
-        }
-
-        // 20ms마다 스크롤 이동
-        setInterval(loopReviews, 20);
+    
     });
 </script>
 </body>
