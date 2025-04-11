@@ -112,7 +112,7 @@ header ul{
 header button.cta {
     background-color: #4876F8;
     color: #fff;
-    padding: 13px 20px 10px 20px;
+    padding: 13px 30px 10px 30px;
     border: none;
     border-radius: 999px;
     cursor: pointer;
@@ -1295,6 +1295,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .sec02-title{
+        padding-top: 16rem;
+    }
+    .sec06{
+        padding-top: 8rem;
+    }
     .modal {
         width: 95%; 
         height: auto; 
@@ -1793,6 +1799,14 @@ footer {
     .slider .slide-track {
         width: calc(500px * 8);
     }
+
+    .slider img{
+        width: 80px;
+    }
+
+    .rv-info p{
+        font-size: 15px;
+    }
     
     @keyframes scroll {
         0% {
@@ -1822,6 +1836,23 @@ footer {
     .slider .slide-track {
         width: calc(400px * 8);
     }
+
+    .slider img{
+        width: 70px;
+    }
+
+    .profile-title h2{
+        font-size: 18px;
+    }
+
+    .profile-title p{
+        font-size: 14px;
+    }
+
+    .rv-info p{
+        font-size: 14px;
+    }
+    
     
     @keyframes scroll {
         0% {
@@ -1830,15 +1861,6 @@ footer {
         100% {
             transform: translateX(calc(-376px * 5));
         }
-    }
-    
-    .profile img {
-        width: 80px;
-        margin-right: 20px;
-    }
-    
-    .rv-info p {
-        font-size: 18px;
     }
 }
 
@@ -1866,6 +1888,22 @@ footer {
         width: calc(320px * 8);
     }
     
+    .slider img{
+        width: 60px;
+    }
+
+    .profile-title h2{
+        font-size: 18px;
+    }
+
+    .profile-title p{
+        font-size: 14px;
+    }
+
+    .rv-info p{
+        font-size: 11px;
+    }
+    
     @keyframes scroll {
         0% {
             transform: translateX(0);
@@ -1881,10 +1919,6 @@ footer {
     
     .profile-title p {
         font-size: 14px;
-    }
-    
-    .rv-info p {
-        font-size: 16px;
     }
 }
 
@@ -1917,7 +1951,7 @@ footer {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-256px * 5));
+            transform: translateX(calc(-296px * 5));
         }
     }
     
@@ -1933,6 +1967,6 @@ footer {
     }
     
     .rv-info p {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
