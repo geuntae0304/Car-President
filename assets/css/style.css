@@ -61,9 +61,15 @@ header {
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 20%;
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .nav__links {
@@ -108,20 +114,148 @@ header button.cta:hover {
     background-color: #3a60d3;
 }
 
+/* 모바일 메뉴 토글 버튼 */
+.mobile-menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #4876F8;
+}
+
+/* 모바일 메뉴 스타일 */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1001;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-close {
+    cursor: pointer;
+    font-size: 24px;
+    color: #4876F8;
+}
+
+.mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.mobile-menu li {
+    margin: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.mobile-cta {
+    background-color: #4876F8;
+    color: #fff !important;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* 모바일 메뉴 오버레이 */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.mobile-menu-overlay.active {
+    display: block;
+}
+
 /* =========================================
    * 반응형 헤더
    ========================================= */
+@media (max-width: 1024px) {
+    header {
+        padding: 0 3%;
+    }
+    
+    .nav__links ul {
+        gap: 15px;
+    }
+    
+    .nav__links a {
+        font-size: 14px;
+    }
+    
+    header button.cta {
+        padding: 10px 15px 8px 15px;
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 768px) {
     header {
-        flex-wrap: wrap;
-        height: auto;
+        padding: 0 5%;
     }
-    .nav__links {
-        flex-direction: column;
-        align-items: center;
+    
+    .nav__links, .header-btn {
+        display: none;
     }
-    .nav__links li {
-        margin-bottom: 10px;
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .sec01 {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 60px;
+    }
+    
+    .logo h2 {
+        font-size: 18px;
+    }
+    
+    .mobile-menu {
+        width: 250px;
+    }
+    
+    .sec01 {
+        margin-top: 60px;
     }
 }
 
@@ -166,7 +300,6 @@ header button.cta:hover {
 }
 .ribbon{
     position: absolute;
-    /* background: linear-gradient(to right, #112F89, #5F87FF); */
     background-image: url('../images/ribbon.png');
     background-size: cover;
     width: 110%;
@@ -179,7 +312,6 @@ header button.cta:hover {
 }
 .shadow-ribbon{
     position: absolute;
-    /* background: linear-gradient(to right, #5F87FF,#112F89 ); */
     background: url('../images/shadow-ribbon.png');
     background-size: cover;
     width: 110%;
@@ -307,23 +439,21 @@ header button.cta:hover {
     width: 100%;
     height: auto;
     position: relative;
-    /* 반원을 배치하기 위해 position 설정 */
     overflow: hidden;
-    /* 반원이 섹션 밖으로 넘치지 않도록 설정 */
     padding-top: 150px;
 }
 
 .sec03::before {
     content: '';
     position: absolute;
-    bottom: 0; /* 섹션 하단에 딱 붙이기 */
-    left: 0; /* 왼쪽 끝에 위치 */
-    width: 100%; /* 섹션의 전체 너비를 채움 */
-    height: 50%; /* 섹션 높이의 40% */
-    background-image: url(../images/bg-semicircle.png); /* 이미지 경로 */
-    background-size: cover; /* 이미지를 섹션 너비에 맞게 채움 */
-    background-repeat: no-repeat; /* 이미지 반복 방지 */
-    background-position: center; /* 이미지가 중앙에 위치하도록 설정 */
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 50%; 
+    background-image: url(../images/bg-semicircle.png); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
 }
 
 .sec03-container{
@@ -395,12 +525,11 @@ header button.cta:hover {
     border: 1px solid #DFE4EA;
     padding-left: 16px;
     transition: border-color 0.3s ease-in-out;
-    /* 테두리 색상 전환 효과 */
 }
 
 .contact input:focus {
-    border: 1px solid #3395F6; /* 선택된 상태의 테두리 색상 */
-    outline: none; /* 기본 outline 제거 */
+    border: 1px solid #3395F6; 
+    outline: none; 
 }
 
 .required-text {
@@ -424,25 +553,22 @@ header button.cta:hover {
 
 /* 체크박스 기본 스타일 */
 .contact input[type="checkbox"] {
-    background-color: #F8F9FA; /* 배경색 */
-    border: 1px solid #C9CFD6; /* 테두리 색 */
+    background-color: #F8F9FA; 
+    border: 1px solid #C9CFD6; 
     width: 18px;
     height: 18px;
-    border-radius: 4px; /* 선택적으로 추가 */
+    border-radius: 4px; 
     margin: 0 9px 0 0;
-    appearance: none; /* 기본 체크박스 스타일 제거 */
+    appearance: none; 
     outline: none;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    /* 애니메이션 추가 */
 }
 
 /* 체크박스가 체크되었을 때 */
 .contact input[type="checkbox"]:checked {
     background-color: #3395F6;
-    /* 체크된 상태의 배경색 */
     border-color: #3395F6;
-    /* 체크된 상태의 테두리 색 */
     position: relative;
 }
 
@@ -457,7 +583,6 @@ header button.cta:hover {
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
     animation: checkmark 0.3s ease forwards;
-    /* 체크 애니메이션 */
 }
 
 /* 체크 애니메이션 키프레임 */
@@ -507,21 +632,16 @@ header button.cta:hover {
     border-style: none;
     color: #fff;
     background-color: #C9CFD6;
-    /* 비활성화 상태 기본 색상 */
     cursor: not-allowed;
-    /* 비활성화 상태에서 커서 변경 */
 }
 
 .contact-btn button:enabled {
     background-color: #3363F3;
-    /* 활성화 상태 색상 */
     cursor: pointer;
-    /* 활성화 상태에서 커서 변경 */
 }
 
 .contact-btn button:enabled:hover {
     background-color: #2B58DE;
-    /* 호버 상태 색상 */
 }
 
 .modal {
@@ -556,13 +676,9 @@ header button.cta:hover {
     width: 0;
     height: 100%;
     background-color: #D1E8FF;
-    /* 차오르는 배경 색상 */
     z-index: -1;
-    /* 텍스트 위로 올라오지 않도록 설정 */
     transition: width 6s linear;
-    /* 6초 동안 채우기 */
     border-radius: 12px;
-    /* 모달의 둥근 모서리와 동일하게 설정 */
 }
 
 .modal.show {
@@ -572,7 +688,6 @@ header button.cta:hover {
 
 .modal.show::before {
     width: 100%;
-    /* 6초 동안 박스 전체를 채움 */
 }
 
 .modal.hidden {
@@ -777,7 +892,7 @@ header button.cta:hover {
     position: relative;
     height:fit-content;
     padding-bottom: 500px;
-    white-space: nowrap; /* 한 줄로 유지 */
+    white-space: nowrap; 
 }
 
 .slide-track {
@@ -840,15 +955,11 @@ header button.cta:hover {
     bottom: 0;
     left: 0;
     height: 100%;
-    /* 박스 높이 */
     width: 0;
-    /* 초기 너비 */
     background-color: #D1E8FF;
     border-radius: 0 0 12px 12px;
     z-index: -1;
-    /* 텍스트 뒤로 배치 */
     transition: width 10s linear;
-    /* 10초 동안 부드럽게 채우기 */
 }
 
 /* =========================================
@@ -998,7 +1109,7 @@ header button.cta:hover {
     font-size: 18px;
     background-color: #41464b;
     box-shadow: outset 0 0 10px rgba(0, 0, 0, 0.5);
-    transform: scale(1); /* 확대 효과 추가 */
+    transform: scale(1); 
     transition: all 0.3s ease-in-out;
 }
 
@@ -1022,7 +1133,6 @@ footer {
     padding: 0 20px;
 }
 
-/* 푸터 상단 영역 */
 .footer-top {
     display: flex;
     justify-content: space-between;
@@ -1074,7 +1184,6 @@ footer {
     color: #fff;
 }
 
-/* 푸터 중간 영역 */
 .footer-middle {
     display: flex;
     justify-content: space-between;
@@ -1109,8 +1218,6 @@ footer {
     color: #aaa;
 }
 
-
-/* 푸터 하단 영역 */
 .footer-bottom {
     text-align: center;
 }
@@ -1121,7 +1228,6 @@ footer {
     margin-bottom: 8px;
 }
 
-/* 반응형 스타일 */
 @media (max-width: 1024px) {
     .footer-top {
         flex-direction: column;
@@ -1159,55 +1265,52 @@ footer {
     }
 }
 
-/* =========================================
-   * 반응형 스타일
-   ========================================= */
 @media (max-width: 1024px) {
     .modal {
-        width: 90%; /* 화면 너비의 90% */
-        height: auto; /* 높이를 내용에 맞게 조정 */
-        padding: 20px; /* 내부 여백 추가 */
+        width: 90%; 
+        height: auto; 
+        padding: 20px; 
     }
 
     .modal h2 {
-        font-size: 1.6rem; /* 텍스트 크기 조정 */
+        font-size: 1.6rem; 
     }
 
     .modal p {
-        font-size: 1.4rem; /* 텍스트 크기 조정 */
+        font-size: 1.4rem; 
     }
 }
 
 @media (max-width: 768px) {
     .modal {
-        width: 95%; /* 화면 너비의 95% */
-        height: auto; /* 높이를 내용에 맞게 조정 */
-        padding: 16px; /* 내부 여백 추가 */
+        width: 95%; 
+        height: auto; 
+        padding: 16px; 
     }
 
     .modal h2 {
-        font-size: 1.4rem; /* 텍스트 크기 조정 */
+        font-size: 1.4rem; 
     }
 
     .modal p {
-        font-size: 1.2rem; /* 텍스트 크기 조정 */
+        font-size: 1.2rem; 
     }
 }
 
 @media (max-width: 576px) {
     .modal {
-        width: 100%; /* 화면 전체 너비 */
-        height: auto; /* 높이를 내용에 맞게 조정 */
-        padding: 12px; /* 내부 여백 추가 */
-        border-radius: 0; /* 둥근 모서리 제거 */
+        width: 100%; 
+        height: auto; 
+        padding: 12px; 
+        border-radius: 0; 
     }
 
     .modal h2 {
-        font-size: 1.2rem; /* 텍스트 크기 조정 */
+        font-size: 1.2rem; 
     }
 
     .modal p {
-        font-size: 1rem; /* 텍스트 크기 조정 */
+        font-size: 1rem; 
     }
 }
 
@@ -1227,7 +1330,6 @@ footer {
         height: 12rem;
         transform: rotate(-6.58deg);
         bottom: 50%;
-        /* left: -100px; */
         z-index: 999;
     
     }
@@ -1239,7 +1341,6 @@ footer {
         height: 12rem;
         transform: rotate(-0.16°deg);
         bottom: 50%;
-        /* left: -100px; */
     }
 }
 
@@ -1273,7 +1374,6 @@ footer {
         height: 12rem;
         transform: rotate(-6.58deg);
         bottom: 47%;
-        /* left: -100px; */
         z-index: 999;
     
     }
@@ -1285,7 +1385,6 @@ footer {
         height: 12rem;
         transform: rotate(-0.16°deg);
         bottom: 47%;
-        /* left: -100px; */
     }
     .car{
         right: 16%;
@@ -1299,11 +1398,9 @@ footer {
     }
     .sec02-container {
         width: 80%;
-        /* 화면이 작아지면 더 넓게 차지 */
     }
     .sec02-box {
         width: 48%;
-        /* 화면이 작아질수록 너비를 늘려서 두 개가 한 줄에 유지되도록 */
     }
     
     .ribbon{
@@ -1314,7 +1411,6 @@ footer {
         height: 12rem;
         transform: rotate(-6.58deg);
         bottom: 47%;
-        /* left: -100px; */
         z-index: 999;
     
     }
@@ -1326,7 +1422,6 @@ footer {
         height: 12rem;
         transform: rotate(-0.16°deg);
         bottom: 47%;
-        /* left: -100px; */
     }
     .car{
         right: 12%;
@@ -1341,17 +1436,16 @@ footer {
     }
     .sec02-container {
         width: 100%;
-        /* 작은 화면에서는 전체 너비 사용 */
     }
     .sec02-info-box1, .sec02-info-box2 {
         display: flex;
-        flex-wrap: wrap; /* 줄바꿈 허용 */
-        gap: 2rem; /* 박스 간 간격 축소 */
-        justify-content: center; /* 가운데 정렬 */
+        flex-wrap: wrap; 
+        gap: 2rem; 
+        justify-content: center; 
     }
     .sec02-box {
-        width: 80%; /* 한 줄에 하나씩 배치 */
-        margin-bottom: 2rem; /* 박스 간 간격 추가 */
+        width: 80%; 
+        margin-bottom: 2rem; 
     }
     .ribbon{
         height: 10rem;
@@ -1360,7 +1454,6 @@ footer {
     .shadow-ribbon{
         height: 10rem;
         bottom: 55%;
-        /* left: -100px; */
     }
     .ribbon-info{
         position: absolute;
@@ -1380,7 +1473,6 @@ footer {
 
     .sec03-container {
         flex-direction: column-reverse;
-        /* title이 contact 위로 올라가도록 설정 */
         align-items: center;
         padding-bottom: 100px;
     }
@@ -1447,13 +1539,13 @@ footer {
     }
     .sec02-info-box1, .sec02-info-box2 {
         display: flex;
-        flex-wrap: wrap; /* 줄바꿈 허용 */
-        gap: 2rem; /* 박스 간 간격 축소 */
-        justify-content: center; /* 가운데 정렬 */
+        flex-wrap: wrap; 
+        gap: 2rem; 
+        justify-content: center; 
     }
     .sec02-box {
-        width: 80%; /* 한 줄에 하나씩 배치 */
-        margin-bottom: 2rem; /* 박스 간 간격 추가 */
+        width: 80%; 
+        margin-bottom: 2rem; 
     }
 
     .sec02-title p{
@@ -1491,13 +1583,13 @@ footer {
     }
     .sec02-info-box1, .sec02-info-box2 {
         display: flex;
-        flex-wrap: wrap; /* 줄바꿈 허용 */
-        gap: 2rem; /* 박스 간 간격 축소 */
-        justify-content: center; /* 가운데 정렬 */;
+        flex-wrap: wrap; 
+        gap: 2rem; 
+        justify-content: center; 
     }
     .sec02-box {
-        width: 80%; /* 한 줄에 하나씩 배치 */
-        margin-bottom: 2rem; /* 박스 간 간격 추가 */
+        width: 80%; 
+        margin-bottom: 2rem; 
     }
 
     .sec02-title p{

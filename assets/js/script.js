@@ -65,4 +65,72 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // 모바일 메뉴 관련 스크립트
+    // 요소 선택
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+    const mobileCta = document.querySelector('.mobile-cta');
+
+    // 모바일 메뉴 열기
+    mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.add('active');
+        mobileMenuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // 스크롤 방지
+    });
+
+    // 모바일 메뉴 닫기 함수
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // 스크롤 복원
+    }
+
+    // 닫기 버튼으로 메뉴 닫기
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+    // 오버레이 클릭으로 메뉴 닫기
+    mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+    // 메뉴 항목 클릭으로 메뉴 닫기
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // 모바일 CTA 버튼 클릭으로 메뉴 닫기
+    if (mobileCta) {
+        mobileCta.addEventListener('click', closeMobileMenu);
+    }
+
+    // 스크롤 시 헤더 스타일 변경
+    const header = document.querySelector('header');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // 스크롤 방향 감지
+        if (scrollTop > lastScrollTop) {
+            // 아래로 스크롤
+            if (scrollTop > 100) {
+                header.style.transform = 'translateY(-100%)'; // 헤더 숨기기
+            }
+        } else {
+            // 위로 스크롤
+            header.style.transform = 'translateY(0)'; // 헤더 보이기
+            
+            // 스크롤 위치에 따라 헤더 스타일 변경
+            if (scrollTop > 50) {
+                header.style.backgroundColor = '#ffffff';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = '#ffffff';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        }
+        
+        lastScrollTop = scrollTop;
+    });
 });

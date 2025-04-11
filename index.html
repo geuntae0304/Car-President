@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- 폰트어썸 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -28,7 +30,32 @@
         <div class="header-btn">
             <button class="cta" onclick="location.href='#section03'">문의하기</button>
         </div>
+        <!-- 모바일 메뉴 토글 버튼 추가 -->
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
+
+    <!-- 모바일 메뉴 추가 -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <h2>카바요</h2>
+            </div>
+            <div class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#">최저가 차량</a></li>
+            <li><a href="#">내 차 구매</a></li>
+            <li><a href="#">평생 책임 서비스</a></li>
+            <li><a href="#">고객후기</a></li>
+            <li><button class="mobile-cta" onclick="location.href='#section03'">문의하기</button></li>
+        </ul>
+    </div>
+    <!-- 모바일 메뉴 오버레이 -->
+    <div class="mobile-menu-overlay"></div>
 
     <!-- 섹션 1: 메인 배너 -->
     <section class="sec01">
