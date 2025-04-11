@@ -1,6 +1,11 @@
+/* =========================================
+   * 프리텐다드 폰트 가져오기
+   ========================================= */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-
+/* =========================================
+   * 기본 스타일 설정
+   ========================================= */
 body{
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
@@ -18,11 +23,9 @@ html, body {
     left: 0;
 }
 
-html, body {
-    overflow-x: hidden;
-}
-
-
+/* =========================================
+   * 유틸리티 클래스
+   ========================================= */
 /* width */
 .w-100{
     width: 100%;
@@ -33,17 +36,18 @@ html, body {
 }
 
 /* flex */
-
 .d-flex{
     display: flex;
 }
 
-/* header */
-
+/* =========================================
+   * 헤더 스타일
+   ========================================= */
 .logo{
     cursor: pointer;
     font-size: 20px;
     font-weight: 700;
+    color: #000;
 }
 
 li, a, button{
@@ -53,57 +57,82 @@ li, a, button{
     text-decoration: none;
 }
 
-.nav__links{
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+.nav__links {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav__links li{
-    display: inline-block;
-    padding: 0px 20px;
+header ul{
+    display: flex;
+    gap: 24px;
 }
 
-.nav__links a{
-    transition: all 0.3s ease 0s;
-    line-height: 100%;
+.nav__links li {
+    margin: 0 10px;
 }
 
-.nav__links a:hover{
+.nav__links a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav__links a:hover {
     color: #4876F8;
 }
 
-button{
-    padding: 14px 28px 10px;
+header button.cta {
     background-color: #4876F8;
     color: #fff;
+    padding: 13px 20px 10px 20px;
     border: none;
     border-radius: 999px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    transition: background-color 0.3s ease;
 }
 
-button:hover{
+header button.cta:hover {
     background-color: #3a60d3;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    
+/* =========================================
+   * 반응형 헤더
+   ========================================= */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .nav__links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav__links li {
+        margin-bottom: 10px;
+    }
 }
 
-
-
-
-/* container */
-
+/* =========================================
+   * 컨테이너 스타일
+   ========================================= */
 .container{
     background: url("../images/main-bg.png");
     background-size: cover;
     width: 100%;
-    height: 650px;
+    height: 70rem;
     text-align: center;
     position: relative;
 }
@@ -126,8 +155,9 @@ header{
     bottom: 23%;
 }
 
-/* 🎀 ribbon */
-
+/* =========================================
+   * 리본 스타일
+   ========================================= */
 .over-hidden{
     width: 100%;
     position: relative;
@@ -170,8 +200,9 @@ header{
 
 }
 
-/* 2️⃣ sec02 */
-
+/* =========================================
+   * 섹션 2 스타일
+   ========================================= */
 .sec02{
     background: linear-gradient(to bottom, #191B1C, #1F2124);
     width: 100%;
@@ -211,9 +242,7 @@ header{
     color: #fff;
 }
 
-
-/* sec02 - info */
-
+/* 섹션 2 정보 박스 */
 .sec02-info-box1{
     display: flex;
     justify-content: center;
@@ -240,8 +269,6 @@ header{
     justify-content: center;
     flex-direction: column;
 }
-
-
 
 .sec02-box:hover {
     box-shadow: outset 0 0 10px rgba(0, 0, 0, 0.5);
@@ -272,10 +299,9 @@ header{
     color: #7B848D;
 }
 
-
-/* 3️⃣sec03 */
-
-
+/* =========================================
+   * 섹션 3 스타일
+   ========================================= */
 .sec03{
     background: #1F2124;
     width: 100%;
@@ -313,8 +339,6 @@ header{
     z-index: 999;
 }
 
-
-
 .sec03-title h3{
     font-size: 64px;
     font-weight: bold;
@@ -349,6 +373,7 @@ header{
     align-items: center;
     z-index: 999;
 }
+
 .m-auto{
     margin: 0 auto;
 }
@@ -397,9 +422,6 @@ header{
     margin-top: 32px;
 }
 
-
-
-
 /* 체크박스 기본 스타일 */
 .contact input[type="checkbox"] {
     background-color: #F8F9FA; /* 배경색 */
@@ -424,7 +446,7 @@ header{
     position: relative;
 }
 
-/* ✅ 체크박스 체크 애니메이션 */
+/* 체크박스 체크 애니메이션 */
 .contact input[type="checkbox"]:checked::after {
     content: '';
     position: absolute;
@@ -475,8 +497,6 @@ header{
     margin: 0;
 }
 
-
-
 .contact-btn button {
     width: 100%;
     height: 53px;
@@ -492,7 +512,6 @@ header{
     /* 비활성화 상태에서 커서 변경 */
 }
 
-/* 활성화 상태 */
 .contact-btn button:enabled {
     background-color: #3363F3;
     /* 활성화 상태 색상 */
@@ -500,13 +519,11 @@ header{
     /* 활성화 상태에서 커서 변경 */
 }
 
-/* 호버 상태 */
 .contact-btn button:enabled:hover {
     background-color: #2B58DE;
     /* 호버 상태 색상 */
 }
 
-/* 🚀modal */
 .modal {
     position: fixed;
     bottom: 32px;
@@ -579,12 +596,11 @@ header{
     margin: 0;
 }
 
-
-
-/* sec04 title */
-
+/* =========================================
+   * 섹션 4 스타일
+   ========================================= */
 .sec04-title{
-    padding-top: 30rem;
+    padding-top: 20rem;
     text-align: center;
     gap: 4.6rem;
     flex-wrap: wrap;
@@ -605,7 +621,6 @@ header{
     color: #fff;
 }
 
-/* sec04 container */
 .sec04{
     background: url('../images/sec04-bg.png') no-repeat;
     background-size: cover;
@@ -613,6 +628,7 @@ header{
     height: 1700px;
 
 }
+
 .sec04-container{
     width: 890px;
     margin: 0 auto;
@@ -620,25 +636,25 @@ header{
     left: -1%;
 }
 
-
 .chat-content1{
     height: fit-content;
     margin-bottom: 350px;
 }
+
 .chat-content2{
     height: fit-content;;
 }
-
 
 .chat-content1 img{
     position: absolute;
     right: -3%;
     bottom: 5%;
 }
+
 .chat-content2 img{
     position: absolute;
     right: -3%;
-    bottom: -35%;
+    bottom: -40%;
 }
 
 .incoming{
@@ -679,25 +695,23 @@ header{
     font-weight: 600;
 }
 
-
-/* sec05 */
-
+/* =========================================
+   * 섹션 5 스타일
+   ========================================= */
 .sec05{
     width: 100vw;
-    height: fit-content;
+    height: 100vh;
     background-color: #F1F3F5;
     position: relative;
 }
 
-
-
 .sec05-title{
     margin: 0 auto;
-    padding-top: 150px;
+    padding-top: 130px;
     text-align: center;
     gap: 4.6rem;
     flex-wrap: wrap;
-    margin-bottom: 130px;
+    margin-bottom: 120px;
 }
 
 .sec05-title p{
@@ -714,45 +728,68 @@ header{
     color: #1F2124;
 }
 
-/* 리뷰 */
+.slider {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
 
-/* review-line-1 애니메이션 */
-@keyframes scroll-horizontal {
+.slider::before, .slider::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    animation: scroll 30s linear infinite;
+    display: flex;
+    width: calc(600px * 8);
+}
+
+.margin-left-24{
+    margin-left: 24px;
+}
+
+@keyframes scroll {
     0% {
-        transform: translateX(0); /* 처음 위치 */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* 왼쪽으로 완전히 이동 */
+        transform: translateX(calc(-576px * 5));
     }
 }
 
-
-.review {
+.slider {
     position: relative;
     height:fit-content;
     padding-bottom: 500px;
-    animation: scroll-horizontal 20s linear infinite; /* 20초 동안 천천히 이동, 반복 */
     white-space: nowrap; /* 한 줄로 유지 */
 }
 
-.review-line-1 {
+.slide-track {
     height: 100%;
     position: absolute;
     display: flex;
     gap: 24px;
     margin-bottom: 300px;
-
 }
 
-.review-line-2 {
-    position: absolute;
-    height: 100%;
-    display: flex;
-    gap: 24px;
-}
-
-.rv-box{
-    width: fit-content;
+.slide{
+    width: 600px;
     height: fit-content;
     background-color: #fff;
     border: 1px solid #C9CFD6;
@@ -762,16 +799,15 @@ header{
 
 .profile img{
     width: 100px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
-
-/* 프로필 */
 .profile{
     display: flex;
     align-items: center;
     margin-bottom: 24px;
 }
+
 .profile-title h2{
     color: #3A4046;
     font-size: 20px;
@@ -779,6 +815,7 @@ header{
     margin-bottom: 8px;
     line-height: 160%;
 }
+
 .profile-title p{
     color: #7B848D;
     font-size: 16px;
@@ -792,12 +829,12 @@ header{
     font-weight: 500;
     line-height: 170%;
 }
+
 .rv-info span{
     background-color: #FFFB7F;
     font-weight: 600;
 }
 
-/* 박스 채우기 효과 */
 .fill-box {
     position: absolute;
     bottom: 0;
@@ -814,7 +851,317 @@ header{
     /* 10초 동안 부드럽게 채우기 */
 }
 
-/* 반응형 modal 스타일 */
+/* =========================================
+   * 섹션 6 스타일
+   ========================================= */
+.sec06{
+    width: 100%;
+    background-color: #2C3136;
+    height: fit-content;
+}
+
+.sec06-title{
+    margin: 0 auto;
+    padding-top: 130px;
+    text-align: center;
+    gap: 4.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+}
+
+.sec06-title p{
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #85a3ff;
+    margin-bottom: 3.2rem;
+}
+
+.sec06-title h2{
+    font-size: 4.4rem;
+    font-weight: 600;
+    line-height: 140%;
+    color: #fff;
+}
+
+.car-boxs{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    gap: 24px;
+}
+
+.car-box{
+    background-color: #fff;
+    width: 350px;
+    height: 355px;
+    border-radius: 12px;
+}
+
+.car-bg{
+    position: relative;
+    background-color: #C9CFD6;
+    width: 100%;
+    height: 120px;
+    border-radius: 12px 12px 0 0;
+}
+
+.car-bg img{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.car-content{
+    height: 125px;
+    margin: 85px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car-info h2{
+    font-size: 16px;
+    color: #7B848D;
+    margin-bottom: 16px;
+}
+
+.car-info h3{
+    color: #3A4046;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.car-price h2{
+    color: #1F2124;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.car-price h3{
+    color: #1F2124;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.car-price{
+    display: flex;
+    align-items: center;
+}
+
+.car-info-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sec06-btn{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 250px;
+}
+
+.sec06-btn button{
+    width: 137px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    background-color: #4D5359;
+    border: 1px solid #7B848D;
+    margin-top: 72px;
+    align-items: center;
+    gap: 4px;
+    font-size: 18px;
+    color: #F1F3F5;
+    display: flex;
+    justify-content: center;
+}
+
+.sec06-contact-btn button {
+    background-color: #fff;
+    font-size: 18px;
+    color: #4876F8;
+    padding: 10px 28px;
+    border: 1px solid #4876F8;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sec06-contact-btn button:hover {
+    background-color: #3a60d3;
+    color: #fff;
+}
+
+.sec06-btn button:hover{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    background-color: #41464b;
+    box-shadow: outset 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1); /* 확대 효과 추가 */
+    transition: all 0.3s ease-in-out;
+}
+
+footer{
+    background-color: #1F2124;
+    height: 400px;
+}
+
+/* =========================================
+   * 푸터 스타일
+   ========================================= */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 푸터 상단 영역 */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-logo h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-menu h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-menu ul {
+    list-style: none;
+}
+
+.footer-menu li {
+    margin-bottom: 12px;
+}
+
+.footer-menu a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: #fff;
+}
+
+/* 푸터 중간 영역 */
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+}
+
+.contact-item p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+
+/* 푸터 하단 영역 */
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-links {
+        gap: 30px;
+    }
+    
+    .footer-middle {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .social-links {
+        margin-top: 20px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* =========================================
+   * 반응형 스타일
+   ========================================= */
 @media (max-width: 1024px) {
     .modal {
         width: 90%; /* 화면 너비의 90% */
@@ -864,11 +1211,6 @@ header{
     }
 }
 
-
-
-/* 💻 Media Query */
-
-
 @media(max-width:1920px){
     .container{
         background: url("../images/main-bg.png");
@@ -900,6 +1242,7 @@ header{
         /* left: -100px; */
     }
 }
+
 @media(max-width:1629px){
     .container{
         height: 60rem;
@@ -1221,4 +1564,116 @@ header{
         margin-bottom: 6rem;
     }
     
+}
+
+@media (max-width: 1024px) {
+    .car-boxs {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    
+    .car-box {
+        width: 45%;
+        max-width: 400px;
+    }
+    
+    .sec06-title {
+        padding-top: 80px;
+        margin-bottom: 60px;
+    }
+    
+    .sec06-title p {
+        font-size: 2rem;
+        margin-bottom: 2.4rem;
+    }
+    
+    .sec06-title h2 {
+        font-size: 3.6rem;
+    }
+    
+    .sec06-btn {
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .car-box {
+        width: 80%;
+        max-width: 350px;
+    }
+    
+    .sec06-title {
+        padding-top: 60px;
+        margin-bottom: 40px;
+    }
+    
+    .sec06-title p {
+        font-size: 1.8rem;
+        margin-bottom: 1.8rem;
+    }
+    
+    .sec06-title h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .car-boxs {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .car-box {
+        width: 90%;
+        max-width: 320px;
+    }
+    
+    .sec06-title {
+        padding-top: 50px;
+        margin-bottom: 30px;
+    }
+    
+    .sec06-title p {
+        font-size: 1.6rem;
+        margin-bottom: 1.4rem;
+    }
+    
+    .sec06-title h2 {
+        font-size: 2.4rem;
+    }
+    
+    .car-content {
+        margin: 85px 20px 20px;
+    }
+    
+    .car-info h2 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .car-info h3 {
+        font-size: 16px;
+    }
+    
+    .car-price h2 {
+        font-size: 20px;
+    }
+    
+    .car-price h3 {
+        font-size: 16px;
+    }
+    
+    .sec06-contact-btn button {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+    
+    .sec06-btn {
+        padding-bottom: 100px;
+    }
+    
+    .sec06-btn button {
+        margin-top: 40px;
+    }
 }
