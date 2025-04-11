@@ -1128,7 +1128,7 @@ header button.cta:hover {
 
 footer{
     background-color: #1F2124;
-    height: 400px;
+    height: fit-content;
 }
 
 /* =========================================
