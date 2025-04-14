@@ -421,7 +421,7 @@ header button.cta:hover {
 .sec02-info-box2{
     display: flex;
     justify-content: center;
-    gap: 4.6rem;
+    gap: 20px;
     padding-bottom: 180px;
 }
 
@@ -853,7 +853,7 @@ header button.cta:hover {
    ========================================= */
 .sec05{
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     background-color: #F1F3F5;
     position: relative;
     padding-bottom: 130px;
@@ -887,6 +887,7 @@ header button.cta:hover {
     margin: auto;
     overflow: hidden;
     position: relative;
+    padding-bottom: 120px;
 }
 
 .slider::before, .slider::after {
@@ -1155,7 +1156,12 @@ header button.cta:hover {
 
 footer{
     background-color: #1F2124;
-    height: 400px;
+    height: fit-content;
+}
+
+footer .footer-bottom p{
+    width: 90%;
+    white-space: nowrap;
 }
 
 /* =========================================
@@ -2037,6 +2043,9 @@ footer {
     
     .profile-title p {
         font-size: 14px;
+    }
+    .footer-bottom p{
+        text-align: left;
     }
 }
 
