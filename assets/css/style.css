@@ -2142,7 +2142,7 @@ footer {
         margin: 0 20px;
     }
     .input-area input, button{
-        width: 280px;
+        width: 30;
         padding-left: -80px;
     }
     .slider{
