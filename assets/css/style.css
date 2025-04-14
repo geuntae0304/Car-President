@@ -2045,7 +2045,6 @@ footer {
         padding-top: 60px;
         margin-bottom: 40px;
     }
-    
     .sec05-title p {
         font-size: 1.6rem;
         margin-bottom: 1.6rem;
@@ -2114,6 +2113,36 @@ footer {
         margin-bottom: 15px;
     }
     
+}
+
+@media (max-width: 414px){
+    .sec01{
+        padding-top: 5px;
+    }
+    .car{
+        top: 40%;
+        width: 100;
+    }
+    .ribbon{
+        top: 30%;
+    }
+    .shadow-ribbon{
+        top: 30%;
+    }
+    .container{
+        height: 300px;
+    }
+    .sec01 h1{
+        position: absolute;
+        top: -50px;
+        font-size: 25vw;
+    }
+}
+
+@media (max-width: 348px){
+    .sec01{
+
+    }
 }
 
 /* 슬라이드 내 텍스트(프로필 제목, 부제목, 리뷰 내용)가 슬라이드 너비보다 커질 경우 자동으로 줄바꿈이 되도록 word-wrap, overflow-wrap, white-space 속성을 추가. */
