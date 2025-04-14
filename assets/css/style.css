@@ -11,8 +11,14 @@ body{
 }
 
 body{
-    margin-top: 80px;
     width: 100vw;
+    background-color: #191B1C;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -125,6 +131,8 @@ header button.cta:hover {
 
 /* 모바일 메뉴 토글 버튼 */
 .mobile-menu-toggle {
+    border: none;
+    background: none;
     display: none;
     cursor: pointer;
     font-size: 24px;
@@ -237,7 +245,7 @@ header button.cta:hover {
         padding: 0 4%;
     }
     
-    .nav__links, .header-btn {
+    .nav__links, header button.cta {
         display: none;
     }
     
@@ -247,6 +255,11 @@ header button.cta:hover {
     
     .sec01 {
         margin-top: 80px;
+    }
+
+    /* 768px 반응형에서 rv-info 안의 br 태그 숨기기 */
+    .rv-info br {
+        display: none;
     }
 }
 
@@ -275,6 +288,12 @@ header button.cta:hover {
 /* =========================================
    * 컨테이너 스타일
    ========================================= */
+
+.sec01{
+    padding-top: 80px;
+    background-color: #fff;
+}
+
 .container{
     background: url("../images/main-bg.png");
     background-size: cover;
@@ -343,6 +362,10 @@ header button.cta:hover {
     height: 12rem;
     gap: 8.2rem;
 
+}
+
+.ribbon-info p {
+    white-space: nowrap;
 }
 
 /* =========================================
@@ -455,6 +478,7 @@ header button.cta:hover {
     overflow: hidden;
     padding-top: 150px;
 }
+
 
 .sec03::before {
     content: '';
@@ -728,11 +752,12 @@ header button.cta:hover {
    * 섹션 4 스타일
    ========================================= */
 .sec04-title{
-    padding-top: 20rem;
+    margin: 0 auto;
+    padding-top: 130px;
     text-align: center;
     gap: 4.6rem;
     flex-wrap: wrap;
-    margin-bottom: 130px;
+    margin-bottom: 120px;
 }
 
 .sec04-title p{
@@ -831,9 +856,11 @@ header button.cta:hover {
     height: 100vh;
     background-color: #F1F3F5;
     position: relative;
+    padding-bottom: 130px;
 }
 
 .sec05-title{
+    display: block;
     margin: 0 auto;
     padding-top: 130px;
     text-align: center;
@@ -1128,7 +1155,7 @@ header button.cta:hover {
 
 footer{
     background-color: #1F2124;
-    height: fit-content;
+    height: 400px;
 }
 
 /* =========================================
@@ -1490,6 +1517,10 @@ footer {
         font-size: 4rem;
     }
 
+    .sec03{
+        padding-top: 10px;
+    }
+
     .sec03-container {
         flex-direction: column-reverse;
         align-items: center;
@@ -1531,6 +1562,21 @@ footer {
     }
     .sec04{
         height: 1600px;
+    }
+    .sec05{
+        padding-bottom: 20px;
+    }
+
+    .sec05 .profile img{
+        margin-right: 20px;
+    }
+    .sec05 .profile h2{
+        font-size: 16px;
+        margin-bottom: 1px;
+    }
+
+    .sec05 .profile p{
+        font-size: 14p2;
     }
     
 }
@@ -1827,6 +1873,27 @@ footer {
     .sec05-title h2 {
         font-size: 3.6rem;
     }
+    .sec04-title {
+        padding-top: 100px;
+        margin-bottom: 80px;
+    }
+    
+    .sec04-title h2 {
+        font-size: 3.6rem;
+    }
+    .sec02-title {
+        padding-top: 150px;
+        margin-bottom: 80px;
+    }
+    
+    .sec02-title h2 {
+        font-size: 3.6rem;
+    }
+    .chat-content1 img{
+    position: absolute;
+    right: -0%;
+    bottom: 10%;
+    }
     
     .slide {
         width: 400px;
@@ -1877,6 +1944,57 @@ footer {
     
     .sec05-title h2 {
         font-size: 3rem;
+    }
+    .sec04{
+        height: fit-content;
+        padding-bottom: 320px;
+    }
+    .sec04-title {
+        padding-top: 80px;
+        margin-bottom: 60px;
+    }
+    
+    .sec04-title p {
+        font-size: 1.8rem;
+        margin-bottom: 2.4rem;
+    }
+    
+    .sec04-title h2 {
+        font-size: 3rem;
+    }
+    .sec02-title p {
+        font-size: 1.8rem;
+        margin-bottom: 2.4rem;
+    }
+    
+    .sec02-title h2 {
+        font-size: 3rem;
+    }
+    .sec03-title p {
+        font-size: 1.8rem;
+        margin-bottom: 2.4rem;
+    }
+    
+    .sec03-title h2 {
+        font-size: 3rem;
+    }
+    .sec03 img{
+        display: none;
+    }
+    .sec02-info-box1{
+        margin-bottom: 20px;
+    }
+    .chat-content1 p,.chat-content2 p{
+        font-size: 18px;
+    }
+    .sec05{
+        height: fit-content;
+    }
+    .slide-track{
+        margin-bottom: 0;
+    }
+    .slider{
+        padding-bottom: 300px;
     }
     
     .slide {
@@ -1937,13 +2055,42 @@ footer {
         font-size: 2.4rem;
     }
     
+    .rv-info{
+        text-align: center;
+    }
+    .rv-info p{
+        font-size: 15px;
+    }
+    
+    /* 576px 반응형에서 rv-info 안의 br 태그 숨기기 */
+    .rv-info br {
+        display: none;
+    }
+    
     .slide {
         width: 280px;
-        padding: 20px 25px;
+        min-width: 280px;
+        max-width: 320px;
+        padding: 36px 34px;
+        margin-right: 15px; /* 슬라이드 간 간격 추가 */
+    }
+
+    .profile-title h2{
+        margin-bottom: 4px;
+        font-size: 15px;
+    }
+    
+    .slider {
+        height: 280px;
+        overflow-x: hidden; /* 가로 스크롤 숨김 */
+        padding-bottom: 30px;
     }
     
     .slider .slide-track {
-        width: calc(280px * 8);
+        width: calc(280px * 8); /* 슬라이드 개수에 맞게 조정 */
+        gap: 15px; /* 슬라이드 간 간격 */
+        display: flex;
+        flex-direction: row; /* 가로 방향으로 설정 */
     }
     
     @keyframes scroll {
@@ -1951,7 +2098,8 @@ footer {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-296px * 5));
+            transform: translateX(calc(-280px * 4));
+            /* (슬라이드 너비 + 간격) * 슬라이드 개수의 절반 */
         }
     }
     
@@ -1965,8 +2113,24 @@ footer {
         margin-right: 0;
         margin-bottom: 15px;
     }
-    
-    .rv-info p {
-        font-size: 12px;
-    }
+}
+
+/* 슬라이드 내 텍스트(프로필 제목, 부제목, 리뷰 내용)가 슬라이드 너비보다 커질 경우 자동으로 줄바꿈이 되도록 word-wrap, overflow-wrap, white-space 속성을 추가. */
+.profile-title h2{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.profile-title p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    font-size: 13px;
+}
+
+.rv-info p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }

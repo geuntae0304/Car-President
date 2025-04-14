@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카바요 - 중고차 구매 서비스</title>
     <!-- og -->
-    <meta property="og:type" content="카바요">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://carbayo.netlify.app/">
     <meta property="og:title" content="카바요 - 중고차 구매 서비스">
-    <!-- <meta property="og:image" content="https://example.com/image.jpg"> -->
+    <meta property="og:image" content="assets/images/main-bg.png">
     <meta property="og:description" content="카바요 - 중고차 구매 서비스">
     <meta property="og:site_name" content="카바요 - 중고차 구매 서비스">
     <meta property="og:locale" content="ko_KR">
@@ -22,13 +22,13 @@
     <meta name="twitter:image" content="assets/images/main-bg.png" /> 
     
     <!-- 앱 연결 -->
-    <meta property="al:ios:url" content="카바요" />
-    <meta property="al:ios:app_store_id" content="카바요" /> 
-    <meta property="al:ios:app_name" content="카바요" /> 
-    <meta property="al:android:url" content="카바요" />
-    <meta property="al:android:app_name" content="카바요" />
-    <meta property="al:android:package" content="카바요" /> 
-    <meta property="al:web:url" content="카바요" />
+    <meta property="al:ios:url" content="https://apps.apple.com/app/카바요" />
+    <meta property="al:ios:app_store_id" content="123456789" /> 
+    <meta property="al:ios:app_name" content="카바요 - 중고차 구매 서비스" /> 
+    <meta property="al:android:url" content="https://play.google.com/store/apps/details?id=com.carbayo.app" />
+    <meta property="al:android:app_name" content="카바요 - 중고차 구매 서비스" />
+    <meta property="al:android:package" content="com.carbayo.app" /> 
+    <meta property="al:web:url" content="https://carbayo.netlify.app/" />
     <!-- CSS 파일 연결 -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -37,74 +37,42 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- 폰트어썸 아이콘 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- 파비콘 -->
-    <link rel="icon" href="assets/images/icon/favicon.png">
-    <link rel="apple-touch-icon" sizes="57x57" 
-    href="assets/images/icon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" 
-    href="assets/images/icon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" 
-    href="assets/images/icon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" 
-    href="assets/images/icon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" 
-    href="assets/images/icon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" 
-    href="assets/images/icon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" 
-    href="assets/images/icon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" 
-    href="assets/images/icon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" 
-    href="assets/images/icon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  
-    href="assets/images/icon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icon/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/images/icon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <!-- 헤더 영역 -->
-    <header class="header-info">
-        <div class="logo" onclick="location.href='#sec01'">
+    <header>
+        <div class="logo">
             <img src="assets/images/icon/Logo.png" alt="logo">
         </div>
-        <nav class="nav__links">
-            <ul>
-                <li><a href="#">최저가 차량</a></li>
-                <li><a href="#">내 차 구매</a></li>
-                <li><a href="#">평생 책임 서비스</a></li>
-                <li><a href="#">고객후기</a></li>
+        <nav class="nav">
+            <ul class="nav__links">
+                <li><a href="#section02">최저가 차량</a></li>
+                <li><a href="#section03">문의하기</a></li>
+                <li><a href="#section04">평생 책임 서비스</a></li>
+                <li><a href="#section05">고객후기</a></li>
             </ul>
         </nav>
-        <div class="header-btn">
-            <button class="cta" onclick="location.href='#section03'">문의하기</button>
-        </div>
-        <!-- 모바일 메뉴 토글 버튼 추가 -->
-        <div class="mobile-menu-toggle">
+        <button class="cta">문의하기</button>
+        <button class="mobile-menu-toggle">
             <i class="fas fa-bars"></i>
-        </div>
+        </button>
     </header>
 
     <!-- 모바일 메뉴 추가 -->
     <div class="mobile-menu">
         <div class="mobile-menu-header">
             <div class="logo">
-                <h2>카바요</h2>
+                <img src="assets/images/icon/Logo.png" alt="logo">
             </div>
             <div class="mobile-menu-close">
                 <i class="fas fa-times"></i>
             </div>
         </div>
         <ul>
-            <li><a href="#">최저가 차량</a></li>
-            <li><a href="#">내 차 구매</a></li>
-            <li><a href="#">평생 책임 서비스</a></li>
-            <li><a href="#">고객후기</a></li>
+            <li><a href="#section02">최저가 차량</a></li>
+            <li><a href="#section03">문의하기</a></li>
+            <li><a href="#section04">평생 책임 서비스</a></li>
+            <li><a href="#section05">고객후기</a></li>
             <li><button class="mobile-cta" onclick="location.href='#section03'">문의하기</button></li>
         </ul>
     </div>
@@ -510,7 +478,7 @@
                         <h3>서비스</h3>
                         <ul>
                             <li><a href="#">최저가 차량</a></li>
-                            <li><a href="#">내 차 구매</a></li>
+                            <li><a href="#">문의하기</a></li>
                             <li><a href="#">평생 책임 서비스</a></li>
                             <li><a href="#">고객후기</a></li>
                         </ul>
