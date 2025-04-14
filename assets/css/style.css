@@ -1564,10 +1564,10 @@ footer {
         right: 0%;
     }
     .chat-content1{
-        margin-bottom: 250px;
+        margin-bottom: 200px;
     }
     .sec04{
-        height: 1600px;
+        height: 1500px;
     }
     .sec05{
         padding-bottom: 20px;
@@ -1582,7 +1582,7 @@ footer {
     }
 
     .sec05 .profile p{
-        font-size: 14p2;
+        font-size: 14px;
     }
     
 }
@@ -1877,7 +1877,7 @@ footer {
     }
     
     .sec05-title h2 {
-        font-size: 3.6rem;
+        font-size: 24px;
     }
     .sec04-title {
         padding-top: 100px;
@@ -1885,7 +1885,7 @@ footer {
     }
     
     .sec04-title h2 {
-        font-size: 3.6rem;
+        font-size: 24px;
     }
     .sec02-title {
         padding-top: 150px;
@@ -1893,7 +1893,7 @@ footer {
     }
     
     .sec02-title h2 {
-        font-size: 3.6rem;
+        font-size: 24px;
     }
     .chat-content1 img{
     position: absolute;
@@ -1939,7 +1939,7 @@ footer {
 
 @media (max-width: 768px) {
     .sec05-title {
-        padding-top: 80px;
+        padding-top: 50px;
         margin-bottom: 60px;
     }
     
@@ -1949,11 +1949,11 @@ footer {
     }
     
     .sec05-title h2 {
-        font-size: 3rem;
+        font-size: 24px;
     }
     .sec04{
         height: fit-content;
-        padding-bottom: 320px;
+        padding-bottom: 280px;
     }
     .sec04-title {
         padding-top: 80px;
@@ -1966,7 +1966,7 @@ footer {
     }
     
     .sec04-title h2 {
-        font-size: 3rem;
+        font-size: 24px;
     }
     .sec02-title p {
         font-size: 1.8rem;
@@ -1974,7 +1974,7 @@ footer {
     }
     
     .sec02-title h2 {
-        font-size: 3rem;
+        font-size: 24px;
     }
     .sec03-title p {
         font-size: 1.8rem;
@@ -1982,7 +1982,7 @@ footer {
     }
     
     .sec03-title h2 {
-        font-size: 3rem;
+        font-size: 24px;
     }
     .sec03 img{
         display: none;
@@ -1991,7 +1991,7 @@ footer {
         margin-bottom: 20px;
     }
     .chat-content1 p,.chat-content2 p{
-        font-size: 18px;
+        font-size: 15px;
     }
     .sec05{
         height: fit-content;
