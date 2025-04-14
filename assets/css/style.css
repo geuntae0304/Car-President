@@ -2137,6 +2137,14 @@ footer {
         top: -50px;
         font-size: 25vw;
     }
+    .contact{
+        width: 75%;
+        margin: 0 20px;
+    }
+    .slider{
+        height: 100;
+        padding-bottom: 70px;
+    }
 }
 
 @media (max-width: 348px){
