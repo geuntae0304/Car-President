@@ -1982,7 +1982,7 @@ footer {
         display: none;
     }
     .sec02-info-box1{
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
     .chat-content1 p,.chat-content2 p{
         font-size: 18px;
@@ -2113,6 +2113,7 @@ footer {
         margin-right: 0;
         margin-bottom: 15px;
     }
+    
 }
 
 /* 슬라이드 내 텍스트(프로필 제목, 부제목, 리뷰 내용)가 슬라이드 너비보다 커질 경우 자동으로 줄바꿈이 되도록 word-wrap, overflow-wrap, white-space 속성을 추가. */
